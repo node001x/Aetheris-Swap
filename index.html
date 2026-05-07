@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheris Swap | Minimalist DEX</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glow-overlay"></div>
+    
+    <div class="swap-container">
+        <div class="swap-header">
+            <h1>Swap</h1>
+            <button id="settings-btn">⚙️</button>
+        </div>
+
+        <div class="input-group">
+            <div class="label-row">
+                <span>From</span>
+                <span>Balance: <span id="eth-balance">0.00</span></span>
+            </div>
+            <div class="input-row">
+                <input type="number" id="input-amount" placeholder="0.0">
+                <button class="token-select">ETH</button>
+            </div>
+        </div>
+
+        <div class="arrow-divider">
+            <div class="arrow-icon">↓</div>
+        </div>
+
+        <div class="input-group">
+            <div class="label-row">
+                <span>To (Estimated)</span>
+                <span>Balance: 0.00</span>
+            </div>
+            <div class="input-row">
+                <input type="number" id="output-amount" placeholder="0.0" readonly>
+                <button class="token-select highlight">Select Token</button>
+            </div>
+        </div>
+
+        <button id="connect-wallet" class="main-btn">Connect Wallet</button>
+    </div>
+
+    <!-- Ethers.js Library for Blockchain connection -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="app.js"></script>
+</body>
+</html>
